@@ -1,1 +1,30 @@
+<div align="center"><H1> Quête DHCP Linux </H1></div>
 
+_________________
+## Pré-requis techniques
+
+> Une VM Debian Server 12 Bookworm  
+> Une VM client Ubuntu 24.04 LTS  
+
+_________________
+## Configurer la carte réseau de la machine virtuelle en Réseau Interne
+_________________
+
+_________________
+## Configurer l'interface réseau du serveur
+_________________
+
+_________________
+## Configurer le service DHCP et mettre en place une adresse statique par adresse MAC pour un client particulier
+_________________
+
+_________________
+## Mettre en place une attribution statique pour une machine cliente particulière dont l'adresse MAC permet d'obtenir l'adresse 172.20.0.10
+_________________
+
+_________________
+## Tester le bon fonctionnement du serveur avec un client classique et le client devant avoir une adresse statique
+_________________
+
+
+Poste une procédure au format markdown permettant pas à pas d'obtenir cette configuration ainsi que les tests associés
