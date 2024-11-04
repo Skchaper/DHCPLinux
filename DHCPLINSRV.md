@@ -16,7 +16,7 @@ _________________
 
 - Cliquer sur la rubrique **Réseau** :
 
-![ONGLET_RESEAU.png](https://github.com/Skchaper/DHCPLinux/blob/main/PHOTOS_QUETE_DHCP_LINUX/Carte%20r%C3%A9seau%20interne/ONGLET_CONFIGURATION.PNG)
+![ONGLET_RESEAU.png](https://github.com/Skchaper/DHCPLinux/blob/main/PHOTOS_QUETE_DHCP_LINUX/Carte%20r%C3%A9seau%20interne/ONGLET_RESEAU.PNG)
 
 - Dans cette partie, sélectionner la carte souhaitée **1**, ensuite penser à activer la carte **2** et enfin sélectionner le **Mode : réseau interne** :
 
