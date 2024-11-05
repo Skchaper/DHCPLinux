@@ -12,15 +12,12 @@ _________________
 
 - Une fois la VM Serveur sélectionnée, cliquer sur **Configuration** :
 
-![ONGLET_CONFIGURATION.png](https://github.com/Skchaper/DHCPLinux/blob/main/PHOTOS_QUETE_DHCP_LINUX/Carte%20r%C3%A9seau%20interne/ONGLET_CONFIGURATION.PNG)
 
 - Cliquer sur la rubrique **Réseau** :
 
-![ONGLET_RESEAU.png](https://github.com/Skchaper/DHCPLinux/blob/main/PHOTOS_QUETE_DHCP_LINUX/Carte%20r%C3%A9seau%20interne/ONGLET_RESEAU.PNG)
 
 - Dans cette partie, sélectionner la carte souhaitée **1**, ensuite penser à activer la carte **2** et enfin sélectionner le **Mode : réseau interne** :
 
-![CARTE_ACTIVER_MODE.png](https://github.com/Skchaper/DHCPLinux/blob/main/PHOTOS_QUETE_DHCP_LINUX/Carte%20r%C3%A9seau%20interne/CARTE_ACTIVER_MODE.PNG)
 
 _________________
 ## Configurer l'interface réseau du serveur
