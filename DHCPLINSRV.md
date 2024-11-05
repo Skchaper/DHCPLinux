@@ -25,7 +25,7 @@ _________________
 _________________
 
 _________________
-## Configurer le service DHCP et mettre en place une adresse statique par adresse MAC pour un client particulier
+## Configurer le service DHCP
 _________________
 
 **Configuration IPv4 SRVDEBIAN12 fixe**
