@@ -4,13 +4,14 @@ _________________
 ## Pré-requis techniques
 
 > Une VM Debian Server 12 Bookworm  
-> Une VM client Ubuntu 24.04 LTS  
+> Une VM client Ubuntu 24.04 LTS
+> Un accès internet sur la VM pour la mise à jour des paquets et l'installation de isc-dhcp-server  
 
 _________________
 ## Configurer la carte réseau de la machine virtuelle en Réseau Interne
 _________________
 
-- Une fois la VM Serveur sélectionnée, cliquer sur **Configuration** :
+- Une fois la VM Serveur installée, la sélectionner puis cliquer sur **Configuration** :
 
 
 - Cliquer sur la rubrique **Réseau** :
@@ -26,6 +27,68 @@ _________________
 _________________
 ## Configurer le service DHCP et mettre en place une adresse statique par adresse MAC pour un client particulier
 _________________
+
+**Configuration IPv4 SRVDEBIAN12 fixe**
+_________________
+
+```bash
+nano /etc/network/interfaces
+```
+
+```bash
+allow-hotplug enp0s3
+iface enp0s3 inet static
+  address 192.168.100.14/24
+  gateway 192.168.100.1
+```
+
+```bash
+sudo systemctl restart networking.service ; sudo ifup enp0s3
+```
+
+**Installer le service DHCP**
+_________________
+
+- Dans un premier temps, il faut mettre à jour les paquets système :
+
+```bash
+apt-get update  
+```
+
+- Ensuite il faut installer le paquet suivant :
+
+```bash
+apt-get install isc-dhcp-server
+```
+
+```bash
+nano /etc/default/isc-dhcp-server
+```
+
+```bash
+INTERFACESv4=""
+```
+
+```bash
+INTERFACESv4="enp0s3"
+```
+
+```bash
+nano /etc/dhcp/dhcpd.conf
+```
+
+```bash
+# Notre configuration pour le réseau 172.18.0.0
+subnet 172.18.0.0 netmask 255.255.0.0 {
+range 172.18.0.20 172.18.0.30;
+default-lease-time 600;
+max-lease-time 7200;
+}
+```
+
+```bash
+service isc-dhcp-server restart
+```
 
 _________________
 ## Mettre en place une attribution statique pour une machine cliente particulière dont l'adresse MAC permet d'obtenir l'adresse 172.20.0.10
