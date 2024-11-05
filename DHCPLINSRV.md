@@ -90,6 +90,24 @@ max-lease-time 7200;
 service isc-dhcp-server restart
 ```
 
+**Test du DHCP**
+_________________
+
+```bash
+nano /etc/network/interfaces
+```
+
+```bash
+# The primary network interface
+allow-hotplug eth0
+iface eth0 inet dhcp
+```
+
+```bash
+ifdown eth0
+ifup eth0
+```
+
 _________________
 ## Mettre en place une attribution statique pour une machine cliente particulière dont l'adresse MAC permet d'obtenir l'adresse 172.20.0.10
 _________________
