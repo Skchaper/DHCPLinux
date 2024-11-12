@@ -31,9 +31,13 @@ _________________
 **Configuration IPv4 SRVDEBIAN12 fixe**
 _________________
 
+Pour définir l'adresse IPv4 fixe du serveur, il faut éditer le fichier **/etc/network/interfaces** :
+
 ```bash
 nano /etc/network/interfaces
 ```
+
+Ajouter (et/ou modifier les lignes si déjà présentes) les lignes suivantes :
 
 ```bash
 allow-hotplug enp0s3
@@ -41,6 +45,8 @@ iface enp0s3 inet static
   address 192.168.100.2/24
   gateway 192.168.100.1
 ```
+
+Une fois les lignes ajoutées et/ou modifiées, taper la commande suivante pour redémarrer la carte réseau et acutaliser son adresse IPv4 attribuée :
 
 ```bash
 sudo systemctl restart networking.service ; sudo ifup enp0s3
