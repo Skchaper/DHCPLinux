@@ -91,6 +91,8 @@ INTERFACESv4="enp0s3"
 nano /etc/dhcp/dhcpd.conf
 ```
 
+- Liste des configurations IP à ajouter au fichier :
+
 ```bash
 # Notre configuration pour le réseau 192.168.100.0
 subnet 192.168.100.0 netmask 255.255.255.0 {
@@ -99,6 +101,8 @@ default-lease-time 600;
 max-lease-time 7200;
 }
 ```
+
+- Une fois les lignes ajoutées, on redémarre le service dhcp :
 
 ```bash
 service isc-dhcp-server restart
