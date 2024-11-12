@@ -117,13 +117,13 @@ nano /etc/network/interfaces
 
 ```bash
 # The primary network interface
-allow-hotplug eth0
+allow-hotplug enp0s3
 iface eth0 inet dhcp
 ```
 
 ```bash
-ifdown eth0
-ifup eth0
+ifdown enp0s3
+ifup enp0s3
 ```
 
 _________________
