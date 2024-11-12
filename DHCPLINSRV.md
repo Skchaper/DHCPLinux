@@ -38,7 +38,7 @@ nano /etc/network/interfaces
 ```bash
 allow-hotplug enp0s3
 iface enp0s3 inet static
-  address 192.168.100.14/24
+  address 192.168.100.2/24
   gateway 192.168.100.1
 ```
 
