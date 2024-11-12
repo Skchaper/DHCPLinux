@@ -94,9 +94,9 @@ nano /etc/dhcp/dhcpd.conf
 - Liste des configurations IP à ajouter au fichier :
 
 ```bash
-# Notre configuration pour le réseau 192.168.100.0
-subnet 192.168.100.0 netmask 255.255.255.0 {
-range 192.168.100.150 192.168.100.200;
+# Notre configuration pour le réseau 172.20.0.0
+subnet 172.20.0.1 netmask 255.255.255.0 {
+range 172.20.0.100 172.20.0.200;
 default-lease-time 600;
 max-lease-time 7200;
 }
