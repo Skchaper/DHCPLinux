@@ -42,8 +42,8 @@ nano /etc/network/interfaces
 ```bash
 allow-hotplug enp0s3
 iface enp0s3 inet static
-  address 192.168.100.2/24
-  gateway 192.168.100.1
+  address 172.20.0.2
+  gateway 172.20.0.1
 ```
 
 - Une fois les lignes ajoutées et/ou modifiées, taper la commande suivante pour redémarrer la carte réseau et acutaliser son adresse IPv4 attribuée :
@@ -95,7 +95,7 @@ nano /etc/dhcp/dhcpd.conf
 
 ```bash
 # Notre configuration pour le réseau 172.20.0.0
-subnet 172.20.0.1 netmask 255.255.255.0 {
+subnet 172.20.0.0 netmask 255.255.255.0 {
 range 172.20.0.100 172.20.0.200;
 default-lease-time 600;
 max-lease-time 7200;
