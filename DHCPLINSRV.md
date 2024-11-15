@@ -19,11 +19,6 @@ _________________
 
 - Dans cette partie, sélectionner la carte souhaitée **1**, ensuite penser à activer la carte **2** et enfin sélectionner le **Mode : réseau interne** :
 
-
-_________________
-## Configurer l'interface réseau du serveur
-_________________
-
 _________________
 ## Configurer le service DHCP
 _________________
