@@ -129,7 +129,7 @@ ifup enp0s8
 
 - Le client a bien obtenu une addresse IP dans la plage du serveur DHCP :
 
-![]()
+![IP_PAR_DHCP](https://github.com/Skchaper/DHCPLinux/blob/main/PHOTOS_QUETE_DHCP_LINUX/IP_A/IP_PAR_DHCP.png)
 
 
 _________________
