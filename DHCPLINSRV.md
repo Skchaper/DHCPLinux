@@ -40,8 +40,8 @@ nano /etc/network/interfaces
 - Ajouter (et/ou modifier les lignes si déjà présentes) les lignes suivantes :
 
 ```bash
-allow-hotplug enp0s3
-iface enp0s3 inet static
+allow-hotplug enp0s8
+iface enp0s8 inet static
   address 172.20.0.2
   gateway 172.20.0.1
 ```
@@ -49,7 +49,7 @@ iface enp0s3 inet static
 - Une fois les lignes ajoutées et/ou modifiées, taper la commande suivante pour redémarrer la carte réseau et acutaliser son adresse IPv4 attribuée :
 
 ```bash
-sudo systemctl restart networking.service ; sudo ifup enp0s3
+sudo systemctl restart networking.service ; sudo ifup enp0s8
 ```
 
 **Installer le service DHCP**
