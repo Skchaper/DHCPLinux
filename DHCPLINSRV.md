@@ -169,10 +169,3 @@ sudo ifup enp0s8
 - Le client a bien reçu l'adresse IP statique attribuée à son adresse MAC :
 
 ![IP_PAR_MAC.png](https://github.com/Skchaper/DHCPLinux/blob/main/PHOTOS_QUETE_DHCP_LINUX/IP_A/IP_PAR_MAC.png)
-
-_________________
-## Tester le bon fonctionnement du serveur avec un client classique et le client devant avoir une adresse statique
-_________________
-
-
-Poste une procédure au format markdown permettant pas à pas d'obtenir cette configuration ainsi que les tests associés
