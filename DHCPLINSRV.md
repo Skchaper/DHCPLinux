@@ -130,26 +130,32 @@ _________________
 ## Mettre en place une attribution statique pour une machine cliente particulière dont l'adresse MAC permet d'obtenir l'adresse 172.20.0.10
 _________________
 
+- Sur la VM serveur, éditer le fichier suivant :
 
 ```bash
 nano /etc/dhcp/dhcpd.conf
 ```
 
+- Et y ajouter les lignes suivantes :
+
 ```bash
-host client1_debian {
-hardware ethernet 08:00:27:bb:40:6b;
-fixed-address 172.18.0.26;
+host CLILINDHCP {
+hardware ethernet 08:00:27:9a:3d:f5;
+fixed-address 172.20.0.10;
 }
 ```
+
+- Une fois le fichier enregistré et fermé, redémarrer le service DHCP : 
 
 ```bash
 service isc-dhcp-server restart
 ```
 
+- Puis effectuez les commandes suivantes sur le client : 
+
 ```bash
 sudo ifdown enp0s8
 ```
-
 ```bash
 sudo ifup enp0s8
 ```
