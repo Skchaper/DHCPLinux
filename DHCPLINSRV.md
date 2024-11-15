@@ -82,7 +82,7 @@ INTERFACESv4=""
 - Dans mon cas, l'interface réseau est la suivante (vous pouvez la trouver avec un ip a dans le terminal de votre machine) :
 
 ```bash
-INTERFACESv4="enp0s3"
+INTERFACESv4="enp0s8"
 ```
 
 - Dans le prochain fichier à éditer, nous allons indiquer les configurations IP à fournir :
@@ -117,8 +117,8 @@ nano /etc/network/interfaces
 
 ```bash
 # The primary network interface
-allow-hotplug enp0s3
-iface eth0 inet dhcp
+allow-hotplug enp0s8
+iface enp0s8 inet dhcp
 ```
 
 ```bash
