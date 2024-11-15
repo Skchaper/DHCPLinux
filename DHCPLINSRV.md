@@ -130,6 +130,30 @@ _________________
 ## Mettre en place une attribution statique pour une machine cliente particulière dont l'adresse MAC permet d'obtenir l'adresse 172.20.0.10
 _________________
 
+
+```bash
+nano /etc/dhcp/dhcpd.conf
+```
+
+```bash
+host client1_debian {
+hardware ethernet 08:00:27:bb:40:6b;
+fixed-address 172.18.0.26;
+}
+```
+
+```bash
+service isc-dhcp-server restart
+```
+
+```bash
+sudo ifdown enp0s8
+```
+
+```bash
+sudo ifup enp0s8
+```
+
 _________________
 ## Tester le bon fonctionnement du serveur avec un client classique et le client devant avoir une adresse statique
 _________________
