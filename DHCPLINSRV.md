@@ -111,9 +111,13 @@ service isc-dhcp-server restart
 **Test du DHCP**
 _________________
 
+- Commençons par éditer le fichier suivant sur le client :
+
 ```bash
 nano /etc/network/interfaces
 ```
+
+- Une fois dans l'éditeur, rentrez les lignes ci-dessous :
 
 ```bash
 # The primary network interface
@@ -121,10 +125,17 @@ allow-hotplug enp0s8
 iface enp0s8 inet dhcp
 ```
 
+- Après l'enregistrement et la fermeture du fichier, relancer l'interface réseau :
+
 ```bash
-ifdown enp0s3
-ifup enp0s3
+ifdown enp0s8
+ifup enp0s8
 ```
+
+- Le client a bien obtenu une addresse IP dans la plage du serveur DHCP :
+
+![]()
+
 
 _________________
 ## Mettre en place une attribution statique pour une machine cliente particulière dont l'adresse MAC permet d'obtenir l'adresse 172.20.0.10
@@ -159,6 +170,10 @@ sudo ifdown enp0s8
 ```bash
 sudo ifup enp0s8
 ```
+
+- Le client a bien reçu l'adresse IP statique attribuée à son adresse MAC :
+
+![]()
 
 _________________
 ## Tester le bon fonctionnement du serveur avec un client classique et le client devant avoir une adresse statique
