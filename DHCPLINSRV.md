@@ -4,7 +4,7 @@ _________________
 ## Pré-requis techniques
 
 > Une VM Debian Server 12 Bookworm  
-> Une VM client Ubuntu 24.04 LTS
+> Une VM client Ubuntu 24.04 LTS  
 > Un accès internet sur la VM pour la mise à jour des paquets et l'installation de isc-dhcp-server  
 
 _________________
